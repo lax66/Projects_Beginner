@@ -1,0 +1,27 @@
+CICD pipeline examples---
+=========================
+
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Build and Run Docker Container') {
+            steps {
+                // Stop and remove the existing container
+                sh 'docker stop todo-app-container || true'
+                sh 'docker rm todo-app-container || true'
+                
+                // Pull the latest code from GitHub
+                git branch: 'main', credentialsId: 'your-credentials', url: 'https://github.com/your/repo.git'
+                
+                // Build the Docker image
+                sh 'docker build -t node-app-todo .'
+
+                // Run the new container
+                sh 'docker run -d --name todo-app-container -p 8000:8000 node-app-todo'
+            }
+        }
+    }
+}
