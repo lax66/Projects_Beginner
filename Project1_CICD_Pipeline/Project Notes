@@ -1,0 +1,10 @@
+CI/CD Pipeline for Node.js: Established a robust CI/CD pipeline using Jenkins and Docker tailored specifically for Node.js applications.
+Infrastructure Setup: Orchestrated the setup of an AWS EC2 instance, configuring Jenkins and Docker to facilitate automated builds and deployments.
+Docker Configuration: Configured Docker on the EC2 instance, ensuring seamless integration with Node.js and npm for building and packaging applications.
+Node.js Dockerfile Creation: Authored a Dockerfile within the GitHub repository to define the Node.js runtime environment and dependencies using npm.
+Automated Image Building: Leveraged Jenkins to automate the Docker image building process upon code changes, streamlining development workflows.
+Secure Integration with GitHub: Implemented SSH and GPG key authentication in Jenkins for secure integration with GitHub, enabling seamless code retrieval and collaboration.
+Declarative Pipeline Definition: Developed a concise declarative Jenkins pipeline script to define the entire CI/CD process for Node.js applications, from testing to deployment.
+Webhook Configuration & Git SCM Integration: Configured webhooks in the GitHub repository to trigger the Jenkins pipeline automatically upon code pushes, while integrating Git SCM in Jenkins for version control.
+Container Management & Error Handling: Implemented logic in the pipeline script to remove older Docker containers before deploying new builds, ensuring port availability and preventing conflicts, while also handling errors effectively to ensure smooth pipeline execution.
+Continuous Improvement & Documentation: Regularly reviewed and optimized the CI/CD pipeline for efficiency, reliability, and security, while documenting the setup, configuration, and troubleshooting procedures to facilitate knowledge sharing and future enhancements.
